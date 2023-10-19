@@ -6,6 +6,9 @@ public class ejemplo {
 
 		
 		System.out.println("Holaa crayola");
+	
+
+		String nombre = "Andrés Rivas";
 	}
 
 }
