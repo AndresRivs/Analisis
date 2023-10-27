@@ -4,8 +4,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class ADA extends JFrame {
 
@@ -60,6 +63,14 @@ public class ADA extends JFrame {
 		contentPane.add(textAltura);
 		
 		JButton btnCuadrado = new JButton("Area cuadrado");
+		btnCuadrado.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int base = Integer.parseInt(textBase.getText());
+				int altura = Integer.parseInt(textAltura.getText());
+				int area = base*altura;
+				JOptionPane.showMessageDialog(btnCuadrado,"el área del cuadrado es de "+area);
+			}
+		});
 		btnCuadrado.setBounds(15, 135, 85, 21);
 		contentPane.add(btnCuadrado);
 	}
