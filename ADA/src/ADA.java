@@ -15,6 +15,7 @@ public class ADA extends JFrame {
 	private JPanel contentPane;
 	private JTextField textBase;
 	private JTextField textAltura;
+	private JButton btnPerimetro;
 
 	/**
 	 * Launch the application.
@@ -71,7 +72,19 @@ public class ADA extends JFrame {
 				JOptionPane.showMessageDialog(btnCuadrado,"el área del cuadrado es de "+area);
 			}
 		});
-		btnCuadrado.setBounds(15, 135, 85, 21);
+		btnCuadrado.setBounds(15, 135, 121, 21);
 		contentPane.add(btnCuadrado);
+		
+		btnPerimetro = new JButton("Perimetro ");
+		btnPerimetro.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int base = Integer.parseInt(textBase.getText());
+				int altura = Integer.parseInt(textAltura.getText());
+				int perimetro = (base+altura)*2;
+				JOptionPane.showMessageDialog(btnCuadrado, perimetro);
+			}
+		});
+		btnPerimetro.setBounds(180, 135, 110, 21);
+		contentPane.add(btnPerimetro);
 	}
 }
